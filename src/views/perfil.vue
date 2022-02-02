@@ -5,7 +5,7 @@
       <v-card>
         <v-row>
           <v-avatar size="300">
-            <v-img src="../assets/images/avatarIcons/3.png"></v-img>
+            <!-- <v-img src="../assets/images/avatarIcons/3.png"></v-img> -->
           </v-avatar>
         </v-row>
         <v-row>

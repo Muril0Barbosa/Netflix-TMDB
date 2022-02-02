@@ -24,9 +24,6 @@
         </v-row>
       </v-card>
     </v-col>
-    <v-col lg="5" md="12" class="mt-4 pl-20">
-      <v-img src="@/assets/images/cadastro.svg" />
-    </v-col>
   </v-row>
 </template>
 <script>

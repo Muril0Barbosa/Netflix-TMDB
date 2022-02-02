@@ -26,7 +26,7 @@
         </template>
       </v-autocomplete>
       <v-avatar size="100">
-        <v-img src="../assets/images/avatarIcons/3.png"></v-img>
+        <!-- <v-img src="../assets/images/avatarIcons/3.png"></v-img> -->
       </v-avatar>
     </v-app-bar>
   </nav>

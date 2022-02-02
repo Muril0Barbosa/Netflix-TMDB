@@ -40,7 +40,7 @@
   </v-row>
 </template>
 <script>
-//import LineOr from "../components/LineOr.vue";
+import LineOr from "../components/LineOr.vue";
 export default {
   components: { LineOr },
   name: "Home",
@@ -84,7 +84,7 @@ export default {
       width: 190px;
     }
     .create-account {
-    
+        color: $button-text-secondary-color;
     }
   }
 }
