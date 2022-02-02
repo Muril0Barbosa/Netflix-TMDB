@@ -1,7 +1,7 @@
-import '@mdi/font/scss/materialdesignicons.scss';
+//import '@mdi/font/scss/materialdesignicons.scss';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css'
+//import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify);
 

@@ -4,13 +4,9 @@ module.exports = {
   ],
   css: {
     loaderOptions: {
-      scss: {
-        prependData() {
-          return `
-            @import "~@/assets/scss/main.scss";
-          `;
+        scss: {
+          additionalData: `@import "~@/assets/scss/main.scss";`
         },
-      },
     },
   },
 }
