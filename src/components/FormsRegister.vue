@@ -96,7 +96,7 @@ export default {
         min: (v) => v.length >= 8 || "Minimo 8 characteres",
         passwordMatch: () =>
           this.password === this.passwordConfirmation ||
-          `senhas nao sao iguais`,
+          `senhas não são iguais`,
         emailRules: [
           (v) => !!v || "Obrigatorio",
           (v) => /.+@.+\..+/.test(v) || "E-mail deve ser um endereço valido",

@@ -4,7 +4,7 @@
       <v-icon class="mr-4 ml-2">fas fa-video</v-icon>
       <v-toolbar-title>
         <v-btn text class="ml-2" color="button-color" to="/dashboard">
-          Netflix Source
+          Netflix Type Of
         </v-btn>
       </v-toolbar-title>
       <v-autocomplete

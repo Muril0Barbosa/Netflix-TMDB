@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseConfig = {
     baseURL: 'http://jsonplaceholder.typicode.com/',
-    headers: {
+    Headers: {
         Authorization: 'Bearer {token}'
     }
 }
