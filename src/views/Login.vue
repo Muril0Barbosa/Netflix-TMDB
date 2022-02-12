@@ -32,8 +32,8 @@ import FormsLogin from "../components/FormsLogin.vue";
 import LineOr from "../components/LineOrPurple.vue";
 import OutlinedButton from "../components/OutlinedButton.vue";
 import FilledButton from "../components/FilledButton.vue";
-import firebase from "firebase";
 import { mapActions } from "vuex";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default {
   name: 'Login',
@@ -46,9 +46,8 @@ export default {
   methods: {
     ...mapActions(['addUser']),
     loginWithFirebase(user) {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(user.email, user.password)
+      const auth = getAuth();
+        signInWithEmailAndPassword(auth, user.email, user.password)
         .then((data) => {
           this.addUser({
             name: data.user.displayName,
@@ -62,22 +61,22 @@ export default {
         });
     },
   },
-  loginWithFacebook() {
-    var provider = new firebase.auth.FacebookAuthProvider();
+//   loginWithFacebook() {
+//     var provider = new firebase.auth.FacebookAuthProvider();
 
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then((result) => {
-        console(result);
-        if (result.credential.accessToken) {
-          this.redirectUser(result);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
+//     firebase
+//       .auth()
+//       .signInWithPopup(provider)
+//       .then((result) => {
+//         console(result);
+//         if (result.credential.accessToken) {
+//           this.redirectUser(result);
+//         }
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   },
 };
 </script>
 

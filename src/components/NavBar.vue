@@ -13,7 +13,7 @@
         hide-selected
         color="white"
         label="Buscar"
-        prepend-inner-icon="search"
+        prepend-inner-icon=""
         flat
         :items="movies"
         item-text="title"
@@ -26,7 +26,7 @@
         </template>
       </v-autocomplete>
       <v-avatar size="100">
-        <!-- <v-img src="../assets/images/avatarIcons/3.png"></v-img> -->
+          <v-img src="../assets/images/avatarIcons/1.png"></v-img>
       </v-avatar>
     </v-app-bar>
   </nav>

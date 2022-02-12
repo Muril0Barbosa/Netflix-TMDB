@@ -27,6 +27,11 @@ export default {
     this.ftechGenres();
     try {
       const response = await this.$http.get("/movie/popular");
+      console.log('minha reposta', response)
+      console.log('minha resposta', response.data.results[0])
+      console.log('minha resposta', response.data.results[1].original_title)
+      console.log('minha resposta', response.data.results[2].original_title)
+      console.log('minha resposta', response.data.results.map((movie)=> movie.original_title))
       this.movies = response.data.results;
     } catch (err) {
       console.log(err);

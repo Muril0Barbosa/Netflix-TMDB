@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import firebase from 'firebase'
-import store from "../store"
+import { initializeApp } from 'firebase/app';
+// import store from "../store"
 
 const firebaseConfig = {
     apiKey: "AIzaSyC2yL-Yz-PKdMPSwpcI_80FKpcQq57HQtc",
@@ -13,12 +13,11 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-  
+const firebase = initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(user => {
-    store.dispatch("addUser", { name: user.displayName, email: user.email });
-});
+// firebase.auth().onAuthStateChanged(user => {
+//     store.dispatch("addUser", { name: user.displayName, email: user.email });
+// });
 
 Vue.prototype.$firebase = firebase;
 

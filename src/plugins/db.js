@@ -1,27 +1,24 @@
 import app from "./firebase";
+import { getDatabase, ref, set } from "firebase/database";
 
-export const db = app.database();
-const userName = db.ref("user/name");
-const WhatchList = db.ref( "user/watchlist");
+export const db = getDatabase(app);
+//const userName = ref("user/name");
+//const WhatchList = ref( "user/watchlist");
 
 export function writeUserName(user) {
-  userName
-    .set({
-      nome: user
-    });
+    set(ref(db, 'user/name'), {
+       nome: user
+      });
+
 }
 
 export function writeWhatchList(JSON) {
-    WhatchList
-      .set({
+    set(ref(db, 'user/watchlist'), {
         nomeDoFilme: JSON
-      });
-  }
-
-export function getUserName(user){
-      return userName.ref("/"+user);
-  }
-
-  export function getWhatlist(){
-    return WhatchList;
+       });
 }
+
+
+
+  
+

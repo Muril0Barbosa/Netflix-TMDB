@@ -11,7 +11,7 @@
 // import Footer from "@/components/Footer.vue";
 import { mapGetters } from "vuex";
 import PopularMovies from "../components/PopularMovies.vue";
-import UpcomingMovies from "../components/UpcomingMovies.vue";
+// import UpcomingMovies from "../components/UpcomingMovies.vue";
 import NavBar from "@/components/NavBar.vue";
 
 
@@ -20,8 +20,8 @@ export default {
   components: {
     NavBar,
     PopularMovies,
-    UpcomingMovies,
-    // Footer,
+    //UpcomingMovies,
+    //Footer,
   },
   data() {
     return {

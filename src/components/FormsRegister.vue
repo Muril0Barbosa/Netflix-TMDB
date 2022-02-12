@@ -16,7 +16,7 @@
         <template v-slot:activator="{ on, attrs }">
           <v-text-field
             v-model="date"
-            label="Birthday date"
+            label="Data de aniversário"
             readonly
             v-bind="attrs"
             v-on="on"
@@ -62,8 +62,7 @@
       label="Confirmar senha"
       hint="Mínimo de 8 caracteres"
       @click:append="showPasswordConfirmation = !showPasswordConfirmation"
-    >
-    </v-text-field>
+    ></v-text-field>
     <v-btn
       :disabled="!valid"
       color="#3A0453"
